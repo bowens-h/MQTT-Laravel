@@ -30,7 +30,7 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Salman\\Mqtt\\": "src/"
+      "Bowens\\Mqtt\\": "src/"
     }
   },
   "extra": {

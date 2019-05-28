@@ -43,6 +43,7 @@ php artisan vendor:publish --provider="Salman\Mqtt\MqttServiceProvider"
 ```
     'host'     => env('mqtt_host','127.0.0.1'),
     'password' => env('mqtt_password',''),
+    'client_id'=> env('mqtt_client_id',''),
     'username' => env('mqtt_username',''),
     'certfile' => env('mqtt_cert_file',''),
     'port'     => env('mqtt_port','1883'),
