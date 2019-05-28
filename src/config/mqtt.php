@@ -8,10 +8,11 @@
 
 return [
 
-    'host' => env('mqtt_host','127.0.0.1'),
-    'password' => env('mqtt_password',''),
-    'username' => env('mqtt_username',''),
-    'certfile' => env('mqtt_cert_file',''),
-    'port' => env('mqtt_port','1883'),
-    'debug' => env('mqtt_debug',false) //Optional Parameter to enable debugging set it to True
+    'host'      => env('MQTT_HOST', '127.0.0.1'),
+    'password'  => env('MQTT_PASSWORD', ''),
+    'client_id' => env('MQTT_CLIENT_ID', ''),
+    'username'  => env('MQTT_USERNAME', ''),
+    'certfile'  => env('MQTTT_CERTFILE', ''),
+    'port'      => env('MQTT_PORT', '1883'),
+    'debug'     => env('MQTT_DEBUG', false) //Optional Parameter to enable debugging set it to True
 ];

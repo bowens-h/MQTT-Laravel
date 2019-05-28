@@ -30,20 +30,29 @@ namespace Salman\Mqtt\MqttClass;
 
 */
 
-
 class Mqtt
 {
+
     protected $client;
+
     protected $host = null;
+
+    protected $client_id = null;
+
     protected $username = null;
+
     protected $cert_file = null;
+
     protected $password = null;
+
     protected $port = null;
+
     protected $debug = null;
 
     public function __construct()
     {
         $this->host      = config('mqtt.host');
+        $this->client_id = config('mqtt.client_id');
         $this->username  = config('mqtt.username');
         $this->password  = config('mqtt.password');
         $this->cert_file = config('mqtt.certfile');
@@ -52,14 +61,12 @@ class Mqtt
 
     }
 
-
     public function ConnectAndPublish($topic, $msg)
     {
-        $client = new MqttService($this->host,$this->port, rand(0,100), $this->cert_file, $this->debug);
+        $client = new MqttService($this->host, $this->port, $this->client_id, $this->cert_file, $this->debug);
 
-        if ($client->connect(true, null, $this->username, $this->password))
-        {
-            $client->publish($topic,$msg);
+        if ($client->connect(true, null, $this->username, $this->password)) {
+            $client->publish($topic, $msg);
             $client->close();
 
             return true;
@@ -68,6 +75,5 @@ class Mqtt
         return false;
 
     }
-
 
 }
