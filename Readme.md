@@ -6,7 +6,7 @@ Based on [bluerhinos/phpMQTT](https://github.com/bluerhinos/phpMQTT)
 
 ## Installation
 ```
-composer require salmanzafar/laravel-mqtt
+composer require bowens-h/laravel-mqtt
 ```
 ## Features
 
@@ -24,20 +24,20 @@ To declare the provider and/or alias explicitly, then add the service provider t
 ```
 'providers' => [
 
-        Salman\Mqtt\MqttServiceProvider::class,
+        Bowens\Mqtt\MqttServiceProvider::class,
 ];
 ```
 And then add the alias to your config/app.php:
 ```
 'aliases' => [
 
-       'Mqtt' => \Salman\Mqtt\Facades\Mqtt::class,
+       'Mqtt' => \Bowens\Mqtt\Facades\Mqtt::class,
 ];
 ```
 ## Configuration
 Publish the configuration file
 ```
-php artisan vendor:publish --provider="Salman\Mqtt\MqttServiceProvider"
+php artisan vendor:publish --provider="Bowens\Mqtt\MqttServiceProvider"
 ```
 ## Config/mqtt.php
 ```
@@ -52,7 +52,7 @@ php artisan vendor:publish --provider="Salman\Mqtt\MqttServiceProvider"
 #### Publishing topic
 
 ```
-use Salman\Mqtt\MqttClass\Mqtt;
+use Bowens\Mqtt\MqttClass\Mqtt;
 
 public function SendMsgViaMqtt($topic, $message)
 {
