@@ -6,7 +6,7 @@
  * Time: 1:16 PM
  */
 
-namespace Salman\Mqtt\MqttClass;
+namespace Bowens\Mqtt\MqttClass;
 
 /*
 	Licence

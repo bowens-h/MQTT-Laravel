@@ -6,12 +6,13 @@
  * Time: 12:03 PM
  */
 
-namespace Salman\Mqtt\Facades;
+namespace Bowens\Mqtt\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 class Mqtt extends Facade
 {
+
     protected static function getFacadeAccessor()
     {
         return 'Mqtt';
